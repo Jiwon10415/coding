@@ -1,0 +1,251 @@
+while True:
+  # 입력값 받기
+  사칙연산 = input( "사칙연산 기호 (+ - * /)을 입력해주세요")
+  첫번째숫자 = int(input("첫번째숫자를 입력해주세요"))
+  두번째숫자 = int(input("두번째숫자를 입력해주세요"))
+  # 계산 및 출력
+  if 사칙연산 == "+":
+    print("더하기입니다.")
+    print(첫번째숫자+두번째숫자)
+  elif 사칙연산=="-":
+    print("빼기입니다")
+    print(첫번째숫자-두번째숫자)
+  elif 사칙연산=="*":
+    print("곱하기입니다")
+    print(첫번째숫자*두번째숫자)
+  elif 사칙연산=="/":
+    print("나누기입니다")
+    print(첫번째숫자/두번째숫자)
+  # 종료 여부 확인 후 종료
+  종료여부= input("종료하려면 1을 입력해주세요")
+  if 종료여부== "1":
+    print("종료합니다.")
+    break
+
+def 값입력하기():
+    사칙연산 = input( "사칙연산 기호 (+ - * /)을 입력해주세요")
+    첫번째숫자 = int(input("첫번째숫자를 입력해주세요"))
+    두번째숫자 = int(input("두번째숫자를 입력해주세요"))
+    return 사칙연산, 첫번째숫자, 두번째숫자
+
+사칙연산, 첫번째숫자, 두번째숫자 = 값입력하기()
+
+print(사칙연산,첫번째숫자,두번째숫자)
+
+def 계산및출력(사칙연산, 첫번째숫자, 두번째숫자):
+    if 사칙연산 == "+":
+      print("더하기입니다.")
+      print(첫번째숫자+두번째숫자)
+    elif 사칙연산=="-":
+      print("빼기입니다")
+      print(첫번째숫자-두번째숫자)
+    elif 사칙연산=="*":
+     print("곱하기입니다")
+     print(첫번째숫자*두번째숫자)
+    elif 사칙연산=="/":
+      print("나누기입니다")
+      print(첫번째숫자/두번째숫자)
+
+계산및출력(사칙연산="+", 첫번째숫자=10, 두번째숫자=20)
+
+def 종료여부확인():
+    종료여부 = input("종료하려면 1을 입력해주세요")
+    return 종료여부=="1"
+
+종료여부 = 종료여부확인()
+print(종료여부)
+
+while True:
+    기호, 첫번째숫자, 두번째숫자 = 값입력하기()
+    계산및출력(기호, 첫번째숫자, 두번째숫자)
+    종료여부= 종료여부확인()
+    if 종료여부:
+        break
+
+def 계산기():
+      while True:
+        기호, 첫번째숫자, 두번째숫자 = 값입력하기()
+        계산및출력(기호, 첫번째숫자, 두번째숫자)
+        종료여부= 종료여부확인()
+        if 종료여부:
+            break
+
+계산기()
+
+
+
+#함수만들기, 함수 정의,함수 선언
+def hello():
+    print("안녕하세요")
+
+hello()
+
+def helloToName(name):
+    print(name,"님 안녕하세요")
+
+helloToName("김지원")
+
+def add(num,num2):
+    result = num+num2
+
+add(1,2)
+
+addResult = add(1,2)
+
+print(addResult)
+
+def add2(num,num2):
+    result = num+num2
+    return result
+
+addResult2 = add(1,2)
+print(addResult2)
+
+def add3(num,num2):
+    result = num+num2
+    return result
+    print("hi")
+add3(1,2)
+#함수는 한번만 반환
+
+# 아래와 같이 만들어진경우에는
+# x와y가 뒤죽박죽이된다.
+# 함수를 사용할대 명확하지못하다.
+def x빼기y(y,x):
+    뺄셈결과 = x - y
+    print(뺄셈결과)
+x빼기y(20,10)#-10
+#매개변수를 함수에 넣을때
+#매개변수명을 지정할 수 있다.
+x빼기y(x=20, y= 10) #10
+
+def 덧셈뺄셈(x,y):
+    덧셈결과 = x +y
+    뺄셈결과 = x-y
+    return 덧셈결과, 뺄셈결과
+
+결과 = 덧셈뺄셈(1,2)
+print(결과)
+
+def 덧셈뺄셈(x,y):
+    덧셈결과 = x +y
+    뺄셈결과 = x-y
+    return 덧셈결과, 뺄셈결과
+함수실행결과 = 덧셈뺄셈(20,10)#함수실행결과 = (30,10)
+print(함수실행결과)
+print(type(함수실행결과))
+print(함수실행결과[0],함수실행결과[1])
+덧셈결과 = 함수실행결과[0]
+뺄셈결과 = 함수실행결과[1]
+print(덧셈결과)
+print(뺄셈결과)
+
+#튜플을 아래와같이 변수에할당 가능하다
+튜플값1, 튜플값2 = (1,2)
+print(튜플값1)
+
+덧셈결과, 뺄셈결과 = 덧셈뺄셈(20,10)
+print(덧셈결과)
+print(뺄셈결과)
+
+"""class"""
+
+num=1
+print(type(num))
+
+string="hello"
+print(type(string))
+
+class Animal:
+    pass
+#아무내용 x
+
+animal = Animal()
+print(type(animal))
+
+class Animal:
+    kor = "동물"
+    def 숨쉬기():
+        print("숨을 쉽니다")
+    def 움직이기():
+      print("몸을 움직입니다")
+
+개 = Animal()
+print(type(개))
+Animal.숨쉬기()
+Animal.움직이기()
+print("=====================")
+개.숨쉬기()
+개.움직이기()
+
+class Animal:
+    kor = "동물"
+    def 숨쉬기(self):
+        print("숨을 쉽니다")
+    def 움직이기(self):
+        print("몸을 움직입니다")
+    def 말하기(self,문장):
+        print(문장)
+animal = Animal()
+animal.숨쉬기()
+animal.움직이기()
+animal.말하기("안녕하세요")
+print(animal.kor)
+
+class Animal:
+    kor = "동물"
+    def __init__(self):
+        print("태어났습니다")
+    def 숨쉬기(self):
+        print("숨을 쉽니다")
+    def 움직이기(self):
+        print("몸을 움직입니다")
+    def 말하기(self,문장):
+        print(문장)
+    def __del__(self):
+        print("죽었습니다")
+animal = Animal()
+print("=========================================")
+del animal
+
+class Animal:
+    kor = "동물"
+    def __init__(self,키,생일):
+        self.키 = 키
+        self.생일 = 생일
+        print("태어났습니다")
+    def 키얻기(self):
+        print(f"키는 {self.키}cm 입니다")
+    def 생일얻기(self):
+        print(f"생일은 {self,생일}입니다")
+    def 숨쉬기(self):
+        print("숨을 쉽니다")
+    def 움직이기(self):
+        print("몸을 움직입니다")
+    def 말하기(self,문장):
+        print(문장)
+    def __del__(self):
+        print("죽었습니다")
+
+animal = Animal()
+print("=========================================")
+del animal
+
+animal = Animal(키=30, 생일=20220219)
+print(animal.키)
+animal.키얻기()
+
+dir(animal)
+
+print(type(animal.말하기))
+
+class 개(Animal):
+    def 짖기(self):
+        print("멍")
+
+요크셔 = 개(키=30, 생일="오늘")
+요크셔.짖기()
+
+요크셔.키얻기()
+
+del 요크셔
